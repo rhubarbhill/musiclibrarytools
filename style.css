@@ -1,0 +1,853 @@
+/* General Styles */
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+main {
+    margin-top: 2rem;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Textarea Container */
+.textarea-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+/* Textareas */
+textarea {
+    flex: 1;
+    height: 300px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    resize: both;
+}
+
+/* Table Container */
+.table-container {
+    margin-top: 1rem;
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f9;
+    font-weight: bold;
+}
+
+td {
+    height: 2rem;
+}
+
+td[contenteditable="true"] {
+    outline: none;
+}
+
+/* New */
+
+/* Styling for the mode toggle */
+/* .mode-toggle-container {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#modeToggle {
+    margin-left: 10px;
+}
+
+#modeToggleButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#modeToggleButton:hover {
+    background-color: #0056b3;
+} */
+
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#spreadsheetTable td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+
+/* New */
+
+#addRowButton {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #6200ea;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#addRowButton:hover {
+    background-color: #4b00b3;
+}
+
+#spreadsheetTable {
+    width: auto;
+    /* Allow the table to adjust to its content width */
+    border-collapse: collapse;
+    /* Keep the borders clean */
+    margin: 0 auto;
+    /* Center the table if desired */
+}
+
+#spreadsheetTable th,
+#spreadsheetTable td {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    /* Keep the table styling consistent */
+    text-align: left;
+}
+
+#spreadsheetTable td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: left;
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    overflow: hidden;
+    /* Hide overflowed text */
+    text-overflow: ellipsis;
+    /* Add "..." for clipped text */
+    max-width: 100px;
+    /* Set a max width for cells */
+}
+
+#spreadsheetTable td[contenteditable="true"]:focus {
+    outline: 2px solid #0056b3;
+}
+
+#spreadsheetTable tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+#spreadsheetContainer {
+    overflow-x: visible;
+    /* Prevent horizontal scrolling */
+    display: flex;
+    /* Allow the table to grow beyond container width */
+    justify-content: flex-start;
+    /* Align the table to the start */
+}
+
+#spreadsheetTable tr {
+    transition: background-color 0.3s ease;
+    /* Smooth transition for flashing effect */
+}
+
+.copyRowButton {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.copyRowButton:hover {
+    background-color: #0056b3;
+}
+
+/* App */
+
+body {
+    background-color: #fcf5e3;
+}
+
+.to-do-list,
+.desc-tool {
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 0px;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.top-button {
+    font-size: 1rem;
+}
+
+.to-do-list th {
+    border-style: none;
+}
+
+.to-do-list li {
+    font-size: 1.2rem;
+    /* Base font size for song rows */
+    padding: 10px;
+    /* Padding around the rows */
+    width: 95%;
+    /* Full width of the container */
+    text-align: left;
+    background-color: hsl(0, 0%, 97%);
+    margin-bottom: 5px;
+    /* Margin between song rows */
+    border: 2px solid hsla(0, 0%, 85%, 0.75);
+    /* Thinner border */
+    border-radius: 3px;
+    /* Smaller border radius */
+}
+
+.to-do-list th {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Flexbox container for the page */
+.song-page {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* 3 parts for song container, 1 part for search container */
+    padding: 10px;
+    /* Add padding around the page */
+    gap: 20px;
+    /* Space between song container and search container */
+}
+
+/* Scrollable container for the song list */
+.song-container {
+    height: 65vh;
+    /* Maximum height for scrolling */
+    overflow-y: auto;
+    /* Enable scrolling if content overflows */
+    padding: 15px;
+    /* Padding inside the song container */
+    border-right: 1px solid #ccc;
+    /* Border to the right */
+    background-color: #fff;
+    /* Background color */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
+
+/* Container for search bars */
+.search-container {
+    float: right;
+    /* Float the search container to the right */
+    width: 100%;
+    /* Set a width for the search container */
+    height: 48vh;
+    padding: 15px;
+    /* Padding inside the search container */
+    background-color: #f9f9f9;
+    /* Background color */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
+
+.song-row {
+    display: flex;
+    /* Use flexbox for the song row */
+    justify-content: space-between;
+    /* Align items to fill the space */
+    align-items: center;
+    /* Center items vertically */
+    padding: 10px;
+    /* Reduced padding */
+    width: 90%;
+    /* Keep flexible width */
+    background-color: hsl(0, 0%, 97%);
+    margin-bottom: 5px;
+    /* Reduced margin for spacing */
+    border: 2px solid hsla(0, 0%, 85%, 0.75);
+    border-radius: 3px;
+}
+
+.song-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* Bold font for song name */
+    display: block;
+    /* Ensure song name is on its own line */
+}
+
+/* All matching songs */
+
+.all-matching-songs {
+    height: 75vh;
+    /* Taller than the main song container */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    padding: 15px;
+    /* Padding inside the container */
+    border-left: 1px solid #ccc;
+    /* Border on the left */
+    background-color: #f9f9f9;
+    /* Slightly lighter background for differentiation */
+    box-sizing: border-box;
+    /* Include padding in height/width calculations */
+}
+
+.all-matching-songs .song-row {
+    margin-bottom: 10px;
+    /* Spacing between rows */
+    padding: 10px;
+    /* Padding inside each row */
+    border-radius: 5px;
+    /* Rounded corners for cleaner look */
+    text-align: left;
+    /* Ensure left alignment */
+    display: flex;
+    /* Ensure content behaves predictably */
+    align-items: flex-start;
+    /* Align items to the top */
+    gap: 0;
+    /* No gaps between children */
+    box-sizing: border-box;
+    /* Include padding in width calculations */
+}
+
+
+/* Content wrapper for song info and buttons */
+.song-content {
+    display: flex;
+    /* Flexbox for content alignment */
+    justify-content: space-between;
+    /* Space between song info and buttons */
+    width: 100%;
+    /* Full width for the content */
+}
+
+.song-info {
+    flex: 1;
+    /* Allow song info to take available space */
+    margin-right: 20px;
+    /* Add space between info and buttons */
+}
+
+.buttons {
+    display: flex;
+    /* Align buttons horizontally */
+    align-items: center;
+    /* Center buttons vertically */
+}
+
+.to-do-list button {
+    font-weight: bold;
+    padding: 10px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5 ease;
+}
+
+.delete-button,
+.move-button,
+.add-button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.add-button,
+.top-button {
+    background-color: hsl(125, 47%, 54%);
+}
+
+.add-button:hover,
+.top-button {
+    background-color: hsl(125, 47%, 44%);
+}
+
+.delete-button {
+    background-color: hsl(10, 90%, 50%);
+}
+
+.delete-button:hover {
+    background-color: hsl(10, 90%, 40%);
+}
+
+.move-button {
+    background-color: hsl(207, 90%, 64%);
+}
+
+.move-button:hover {
+    background-color: hsl(207, 90%, 54%);
+}
+
+.language {
+    padding: 0px;
+    text-align: left;
+}
+
+ol {
+    padding: 0 0;
+}
+
+.text {
+    flex: 1;
+}
+
+.search-group {
+    display: flex;
+    /* Use flexbox to align items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    margin-bottom: 15px;
+    /* Space below each search group */
+}
+
+/* Style individual search bars */
+.search-container input[type="text"] {
+    padding: 8px;
+    /* Padding inside the input */
+    border: 1px solid #ccc;
+    /* Border style */
+    border-radius: 5px;
+    /* Rounded corners */
+    width: 100%;
+    /* Full width for inputs */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
+
+
+/* Style for checkbox and label alignment */
+.search-group label {
+    margin-left: 5px;
+    /* Space between checkbox and label */
+    font-weight: normal;
+    /* Normal font weight for labels */
+    font-size: 0.7rem;
+    /* Smaller font size for labels */
+}
+
+.search-container input[type="checkbox"] {
+    margin-right: 5px;
+    /* Space between checkbox and label */
+}
+
+/* Descriptor Table */
+
+.desc-tool {
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.desc-tool table {
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+table th {
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #999999;
+    padding: 0px 5px;
+}
+
+table td {
+    border: 1px solid #999999;
+    padding: 0px;
+    width: 145px;
+}
+
+.desc-tool button {
+    font-size: 1.0rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    width: 145px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5 ease;
+}
+
+textarea {
+    margin-top: 25px;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.5rem;
+    height: 100px;
+    width: 500px;
+}
+
+/* Buttons container */
+.desc-tool .desc_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+/* Copy All Button */
+.copy-all {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 145px;
+    /* Matches the width of the "Reset" button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.copy-all:hover {
+    background-color: #0056b3;
+}
+
+/* Reset Button */
+.reset {
+    background-color: red;
+    color: white;
+    margin-left: 100px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.reset:hover {
+    background-color: rgb(218, 3, 3);
+}
+
+.blank button {
+    background-color: #000000;
+    color: #ffffff;
+    opacity: 0;
+}
+
+.catchy button {
+    background-color: #c9daf8;
+    color: #000000;
+}
+
+.repetitive button {
+    background-color: #f9cb9c;
+    color: #000000;
+}
+
+.complex button {
+    background-color: #a61c00;
+    color: #ffffff;
+}
+
+.ballad button {
+    background-color: #1155cc;
+    color: #ffffff;
+}
+
+.examination button {
+    background-color: #00ffba;
+    color: #000000;
+}
+
+.conscious button {
+    background-color: #783f04;
+    color: #fce5cd;
+}
+
+.thought button {
+    background-color: #073763;
+    color: #efefef;
+}
+
+.positive button {
+    background-color: #ffff00;
+    color: #000000;
+}
+
+.fun button {
+    background-color: #ffe599;
+    color: #000000;
+}
+
+.party button {
+    background-color: #134f5c;
+    color: #ffff00;
+}
+
+.passionate button {
+    background-color: #ff4500;
+    color: #ffffff;
+}
+
+.adventure button {
+    background-color: #a8fa83;
+    color: #38761d;
+}
+
+.nostalgic button {
+    background-color: #c180ca;
+    color: #ffffff;
+}
+
+.love button {
+    background-color: #ff8b92;
+    color: #ffffff;
+}
+
+.breakup button {
+    background-color: #8f3f4d;
+    color: #ffffff;
+}
+
+.LGBT button {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.innuendo button {
+    background-color: #903db0;
+    color: #ffffff;
+}
+
+.rich button {
+    background-color: #783f04;
+    color: #f9cb9c;
+}
+
+.otherworldly button {
+    background-color: #ffaded;
+    color: #351c75;
+}
+
+.urban button {
+    background-color: #ffd966;
+    color: #000000;
+}
+
+.nocturne button {
+    background-color: #0b5394;
+    color: #ffff00;
+}
+
+.nocturne button {
+    background-color: #0b5394;
+    color: #ffd966;
+}
+
+.late-nocturne button {
+    background-color: #073763;
+    color: #ffff00;
+}
+
+.space button {
+    background-color: #000000;
+    color: #ffff00;
+}
+
+.mechanical button {
+    background-color: #cccccc;
+    color: #000000;
+}
+
+.soft button {
+    background-color: #f1c232;
+    color: #000000;
+}
+
+.peaceful button {
+    background-color: #26887d;
+    color: #ffffff;
+}
+
+.sad button {
+    background-color: #3c78d8;
+    color: #ffd7ec;
+}
+
+.cloudy-day button {
+    background-color: #999999;
+    color: #ffffff;
+}
+
+.rain button {
+    background-color: #0000ff;
+    color: #ffffff;
+}
+
+.storm button {
+    background-color: #434343;
+    color: #ffff00;
+}
+
+.tough button {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.sports button {
+    background-color: #e06666;
+    color: #ffffff;
+}
+
+.heavy button {
+    background-color: #cc0000;
+    color: #ffffff;
+}
+
+.gray button {
+    background-color: #b7b7b7;
+    color: #000000;
+}
+
+.dark button {
+    background-color: #000000;
+    color: #b7b7b7;
+}
+
+.mysterious button {
+    background-color: #434343;
+    color: #efefef;
+}
+
+.macabre button {
+    background-color: #660000;
+    color: #ff0000;
+}
+
+.icy button {
+    background-color: #7ff2ff;
+    color: #000000;
+}
+
+.aquatic button {
+    background-color: #4a86e8;
+    color: #ffffff;
+}
+
+.tropical button {
+    background-color: #98ff58;
+    color: #000000;
+}
+
+.desert button {
+    background-color: #e69138;
+    color: #fce5cd;
+}
+
+.green button {
+    background-color: #46ce46;
+    color: #ffffff;
+}
+
+.Summer button {
+    background-color: #ffd700;
+    color: #000000;
+}
+
+.Autumn button {
+    background-color: #ffd966;
+    color: #783f04;
+}
+
+.Winter button {
+    background-color: #6d9eeb;
+    color: #ffffff;
+}
+
+.Halloween button {
+    background-color: #000000;
+    color: #ff9900;
+}
+
+.Christmas button {
+    background-color: #38761d;
+    color: #ea9999;
+}
+
+/* .reset button {
+    background-color: red;
+    color: white;
+} */
+
+.strike {
+    color: rgb(70, 67, 67);
+    opacity: 0.2;
+}
+
+.special {
+    background-color: yellow;
+}
+
+.low-special {
+    background-color: sandybrown;
+}
+
+.song-container {
+    width: 800px;
+}
+
+.search-container {
+    width: 250px;
+}

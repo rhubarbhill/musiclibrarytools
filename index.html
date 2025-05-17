@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Library Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Music Library Tools</h1>
+    </header>
+
+    <!-- Mode Toggle Button -->
+     <!-- <div class="mode-toggle-container"> -->
+        <!-- <button id="modeToggleButton">LD</button> -->
+
+    <LoggingTool>
+    <h1>Listener's Diary</h1>
+    <!-- </div> -->
+
+    <main>
+        <div class="textarea-container">
+            <textarea id="inputBox" placeholder="Listener's Diary"></textarea>
+            <textarea id="outputBox" placeholder="Output"></textarea>
+        </div>
+        <div id="spreadsheetContainer">
+            <table id="spreadsheetTable">
+                <thead>
+                    <tr>
+                        <th>-</th>
+                        <th>Song</th>
+                        <th>Artist</th>
+                        <th>Score</th>
+                        <th class="special">Year</th>
+                        <th class="special">Genre</th>
+                        <th>BG</th>
+                        <th class="low-special">Desc</th>
+                        <th>Comments</th>
+                        <th>BM</th>
+                        <th class="special">Language</th>
+                        <th>Alt-Song</th>
+                        <th>Alt-Art</th>
+                        <th>Notes</th>
+                        <th>Attributes</th>
+                        <th>Owned</th>
+                        <th>Mix</th>
+                        <th class="special">Added</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td><button class="copyRowButton">Copy</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="addRowButton">Add Row</button>
+            <button id="copyAllButton">Copy All</button>
+        </div>
+    </LoggingTool>
+
+    <DescTool>
+        <!-- Divider -->
+        <h1>Descriptor Tool</h1>
+
+        <div class="desc-tool">
+        <table border="2">
+            <tbody>
+                <tr>
+                    <td class="catchy" id="catchy"><button data-descriptor="catchy">catchy</button></td>
+                    <td class="positive" id="happy"><button data-descriptor="happy">happy</button></td>
+                    <td class="passionate" id="passionate"><button data-descriptor="passionate">passionate</button></td>
+                    <td class="rich" id="luxurious"><button data-descriptor="luxurious">luxurious</button></td>
+                    <td class="soft" id="soft"><button data-descriptor="soft">soft</button></td>
+                    <td class="sad" id="sad"><button data-descriptor="sad">sad</button></td>
+                    <td class="tough" id="angry"><button data-descriptor="angry">angry</button></td>
+                    <td class="gray" id="light black"><button data-descriptor="light black">light black</button></td>
+                    <td class="icy" id="icy"><button data-descriptor="icy">icy</button></td>
+                </tr>
+                <tr>
+                    <td class="repetitive" id="repetitive"><button data-descriptor="repetitive">repetitive</button></td>
+                    <td class="positive" id="uplifting"><button data-descriptor="uplifting">uplifting</button></td>
+                    <td class="passionate" id="resolute"><button data-descriptor="resolute">resolute</button></td>
+                    <td class="rich" id="diamond"><button data-descriptor="diamond">diamond</button></td>
+                    <td class="soft" id="relaxation"><button data-descriptor="relaxation">relaxation</button></td>
+                    <td class="sad" id="bittersweet"><button data-descriptor="bittersweet">bittersweet</button></td>
+                    <td class="tough" id="aggressive"><button data-descriptor="aggressive">aggressive</button></td>
+                    <td class="dark" id="scary"><button data-descriptor="scary">scary</button></td>
+                    <td class="aquatic" id="aquatic"><button data-descriptor="aquatic">aquatic</button></td>
+                </tr>
+                <tr>
+                    <td class="complex" id="complex"><button data-descriptor="complex">complex</button></td>
+                    <td class="positive" id="optimistic"><button data-descriptor="optimistic">optimistic</button></td>
+                    <td class="passionate" id="epic"><button data-descriptor="epic">epic</button></td>
+                    <td class="rich" id="lush"><button data-descriptor="lush">lush</button></td>
+                    <td class="soft" id="sunset"><button data-descriptor="sunset">sunset</button></td>
+                    <td class="sad" id="melancholic"><button data-descriptor="melancholic">melancholic</button></td>
+                    <td class="tough" id="violence"><button data-descriptor="violence">violence</button></td>
+                    <td class="dark" id="ominous"><button data-descriptor="ominous">ominous</button></td>
+                    <td class="tropical" id="tropical"><button data-descriptor="tropical">tropical</button></td>
+                </tr>
+                <tr>
+                    <td class="complex" id="progressive"><button data-descriptor="progressive">progressive</button></td>
+                    <td class="positive" id="triumphant"><button data-descriptor="triumphant">triumphant</button></td>
+                    <td class="passionate" id="anthemic"><button data-descriptor="anthemic">anthemic</button></td>
+                    <td class="otherworldly" id="ethereal"><button data-descriptor="ethereal">ethereal</button></td>
+                    <td class="peaceful" id="peaceful"><button data-descriptor="peaceful">peaceful</button></td>
+                    <td class="sad" id="somber"><button data-descriptor="somber">somber</button></td>
+                    <td class="tough" id="manic"><button data-descriptor="manic">manic</button></td>
+                    <td class="dark" id="disturbing"><button data-descriptor="disturbing">disturbing</button></td>
+                    <td class="desert" id="desert"><button data-descriptor="desert">desert</button></td>
+                </tr>
+                <tr>
+                    <td class="ballad" id="ballad"><button data-descriptor="ballad">ballad</button></td>
+                    <td class="positive" id="twee"><button data-descriptor="twee">twee</button></td>
+                    <td class="adventure" id="adventure"><button data-descriptor="adventure">adventure</button></td>
+                    <td class="otherworldly" id="surreal"><button data-descriptor="surreal">surreal</button></td>
+                    <td class="peaceful" id="calm"><button data-descriptor="calm">calm</button></td>
+                    <td class="sad" id="pessimistic"><button data-descriptor="pessimistic">pessimistic</button></td>
+                    <td class="tough" id="energetic"><button data-descriptor="energetic">energetic</button></td>
+                    <td class="dark" id="dark"><button data-descriptor="dark">dark</button></td>
+                    <td class="green" id="nature"><button data-descriptor="nature">nature</button></td>
+                </tr>
+                <tr>
+                    <td class="examination" id="poetic"><button data-descriptor="poetic">poetic</button></td>
+                    <td class="positive" id="boastful"><button data-descriptor="boastful">boastful</button></td>
+                    <td class="nostalgic" id="nostalgic"><button data-descriptor="nostalgic">nostalgic</button></td>
+                    <td class="otherworldly" id="fantasy"><button data-descriptor="fantasy">fantasy</button></td>
+                    <td class="peaceful" id="sparse"><button data-descriptor="sparse">sparse</button></td>
+                    <td class="sad" id="sulking"><button data-descriptor="sulking">sulking</button></td>
+                    <td class="tough" id="energetic 100"><button data-descriptor="energetic 100">energetic 100</button></td>
+                    <td class="dark" id="anxious"><button data-descriptor="anxious">anxious</button></td>
+                    <td class="green" id="pastoral"><button data-descriptor="pastoral">pastoral</button></td>
+                </tr>
+                <tr>
+                    <td class="examination" id="introspective"><button data-descriptor="introspective">introspective</button></td>
+                    <td class="positive" id="celebration"><button data-descriptor="celebration">celebration</button></td>
+                    <td class="love" id="love"><button data-descriptor="love">love</button></td>
+                    <td class="urban" id="urban"><button data-descriptor="urban">urban</button></td>
+                    <td class="peaceful" id="soothing"><button data-descriptor="soothing">soothing</button></td>
+                    <td class="sad" id="lonely"><button data-descriptor="lonely">lonely</button></td>
+                    <td class="tough" id="fight song"><button data-descriptor="fight song">fight song</button></td>
+                    <td class="dark" id="crime"><button data-descriptor="crime">crime</button></td>
+                    <td class="green" id="forest"><button data-descriptor="forest">forest</button></td>
+                </tr>
+                <tr>
+                    <td class="conscious" id="conscious"><button data-descriptor="conscious">conscious</button></td>
+                    <td class="positive" id="sunny day"><button data-descriptor="sunny day">sunny day</button></td>
+                    <td class="breakup" id="breakup"><button data-descriptor="breakup">breakup</button></td>
+                    <td class="nocturne" id="night"><button data-descriptor="night">night</button></td>
+                    <td class="peaceful" id="sedated"><button data-descriptor="sedated">sedated</button></td>
+                    <td class="cloudy-day" id="cloudy day"><button data-descriptor="cloudy day">cloudy day</button></td>
+                    <td class="sports" id="sports"><button data-descriptor="sports">sports</button></td>
+                    <td class="mysterious" id="mysterious"><button data-descriptor="mysterious">mysterious</button></td>
+                    <td class="green" id="Spring"><button data-descriptor="Spring">Spring</button></td>
+                </tr>
+                <tr>
+                    <td class="conscious" id="political"><button data-descriptor="political">political</button></td>
+                    <td class="fun" id="fun"><button data-descriptor="fun">fun</button></td>
+                    <td class="LGBT" id="LGBT"><button data-descriptor="LGBT">LGBT</button></td>
+                    <td class="nocturne" id="urban night"><button data-descriptor="urban night">urban night</button></td>
+                    <td class="peaceful" id="low energy"><button data-descriptor="low energy">low energy</button></td>
+                    <td class="rain" id="rainy"><button data-descriptor="rainy">rainy</button></td>
+                    <td class="heavy" id="heavy"><button data-descriptor="heavy">heavy</button></td>
+                    <td class="macabre" id="apocalypse"><button data-descriptor="apocalypse">apocalypse</button></td>
+                    <td class="Summer" id="Summer"><button data-descriptor="Summer">Summer</button></td>
+                </tr>
+                <tr>
+                    <td class="conscious" id="protest"><button data-descriptor="protest">protest</button></td>
+                    <td class="fun" id="quirky"><button data-descriptor="quirky">quirky</button></td>
+                    <td class="innuendo" id="sensual"><button data-descriptor="sensual">sensual</button></td>
+                    <td class="late-nocturne" id="late night"><button data-descriptor="late night">late night</button></td>
+                    <td class="peaceful" id="morning"><button data-descriptor="morning">morning</button></td>
+                    <td class="rain" id="rain song"><button data-descriptor="rain song">rain song</button></td>
+                    <td class="heavy" id="noisy"><button data-descriptor="noisy">noisy</button></td>
+                    <td class="macabre" id="death"><button data-descriptor="death">death</button></td>
+                    <td class="Autumn" id="Autumn"><button data-descriptor="Autumn">Autumn</button></td>
+                </tr>
+                <tr>
+                    <td class="thought" id="philosophical"><button data-descriptor="philosophical">philosophical</button></td>
+                    <td class="fun" id="humorous"><button data-descriptor="humorous">humorous</button></td>
+                    <td class="innuendo" id="sexual"><button data-descriptor="sexual">sexual</button></td>
+                    <td class="late-nocturne" id="starry night"><button data-descriptor="starry night">starry night</button></td>
+                    <td class="peaceful" id="ECM Style"><button data-descriptor="ECM Style">ECM Style</button></td>
+                    <td class="storm" id="storm"><button data-descriptor="storm">storm</button></td>
+                    <td class="heavy" id="dense"><button data-descriptor="dense">dense</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="Winter" id="Winter"><button data-descriptor="Winter">Winter</button></td>
+                </tr>
+                <tr>
+                    <td class="thought" id="existential"><button data-descriptor="existential">existential</button></td>
+                    <td class="party" id="party"><button data-descriptor="party">party</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="space" id="space"><button data-descriptor="space">space</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="heavy" id="hot"><button data-descriptor="hot">hot</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="Halloween" id="Halloween"><button data-descriptor="Halloween">Halloween</button></td>
+                </tr>
+                <tr>
+                    <td class="thought" id="religious"><button data-descriptor="religious">religious</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="mechanical" id="mechanical"><button data-descriptor="mechanical">mechanical</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="Christmas" id="Christmas"><button data-descriptor="Christmas">Christmas</button></td>
+                </tr>
+                <tr>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="mechanical" id="futuristic"><button data-descriptor="futuristic">futuristic</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                </tr>                                                                
+            </tbody>
+        </table>
+    
+        <textarea id="descriptor-area" name="descriptor-area" rows="3" cols="80"></textarea><br>
+    
+        <button id="copy-button">Copy All</button>
+        <button id="reset-button">Reset</button>
+    
+        <script>
+            function handleTextareaInput() {
+                const textarea = document.querySelector("#descriptor-area");
+                const typedWords = textarea.value.split(";").map(word => word.trim());
+    
+                // Remove all existing strike classes
+                document.querySelectorAll(".strike").forEach(el => el.classList.remove("strike"));
+    
+                // Strike out matching words
+                typedWords.forEach(word => {
+                    const el = document.getElementById(word);
+                    if (el) el.classList.add("strike");
+                });
+            }
+    
+            function writeText(descriptor) {
+                const descriptorCell = document.getElementById(descriptor);
+                if (descriptorCell) {
+                    descriptorCell.classList.add("strike");
+                }
+    
+                const textarea = document.querySelector("#descriptor-area");
+                const current = textarea.value.trim();
+    
+                if (current === "") {
+                    textarea.value = descriptor;
+                } else {
+                    textarea.value += `; ${descriptor}`;
+                }
+            }
+    
+            function copyAll() {
+                const textarea = document.querySelector("#descriptor-area");
+                textarea.select();
+                document.execCommand("copy");
+                // alert("Copied to clipboard!");
+            }
+    
+            function reset() {
+                document.querySelectorAll(".strike").forEach(el => el.classList.remove("strike"));
+                document.querySelector("#descriptor-area").value = "";
+            }
+    
+            // Attach event listeners
+            document.querySelectorAll("button[data-descriptor]").forEach(button => {
+                button.addEventListener("click", () => {
+                    const descriptor = button.getAttribute("data-descriptor");
+                    writeText(descriptor);
+                });
+            });
+    
+            document.querySelector("#descriptor-area").addEventListener("input", handleTextareaInput);
+            document.querySelector("#copy-button").addEventListener("click", copyAll);
+            document.querySelector("#reset-button").addEventListener("click", reset);
+        </script>
+        </div>
+    </DescTool>
+
+    <SongList>
+        <div class="to-do-list">
+            <h1>Song Randomizer</h1>
+            <div>
+                <button class="top-button" id="random-new-button">Random New</button>
+                <button class="top-button" id="random-replace-all-button">Random Replace All</button>
+                <button class="delete-all" id="delete-all-button" style="background-color: red; color: white;">Delete All</button>
+            </div>
+    
+            <div class="song-page">
+                <div class="song-container">
+                    <ol id="task-list"></ol>
+                </div>
+    
+                <div class="search-container">
+                    <!-- Inputs for filtering -->
+                    <input type="text" placeholder="Search by artist..." id="artist-search">
+                    <input type="text" placeholder="[Song name search: Will fix later]" id="name-search">
+                    <div class="search-group">
+                        <input type="text" id="genre-search" placeholder="Search by genre...">
+                        <label>
+                            <input type="checkbox" id="include-all-genres"> Include all
+                        </label>
+                    </div>
+                    <div class="search-group">
+                        <input type="text" id="descriptor-search" placeholder="Search by descriptor...">
+                        <label>
+                            <input type="checkbox" id="include-all-descriptors"> Include all
+                        </label>
+                    </div>
+                    <input type="text" placeholder="Search by year..." id="year-search">
+                    <input type="text" placeholder="Search by language..." id="language-search">
+                    <input type="date" id="start-date">
+                    <input type="date" id="end-date">
+                </div>
+            </div>
+    
+            <div class="all-matching-songs">
+                <button id="load-all-button" style="background-color: blue; color: white;">Load All</button>
+                <div id="song-list"></div>
+            </div>
+        </div>
+    </SongList>
+
+    <GenreProcessors>
+        <div id="genre-processor">
+            <h1>Genre Processor</h1>
+            <textarea id="input-text" placeholder="Enter genres here..."></textarea>
+            <button id="process-button">Process Genres</button>
+            <textarea id="output-text" placeholder="Output will appear here..."></textarea>
+        </div>
+
+        <div id="unfiltered-processor">
+            <h1>Unfiltered Genre Processor</h1>
+            <h3>(Does not work yet)</h3>
+            <textarea id="input-text" placeholder="Enter genres here..."></textarea>
+            <button id="process-button">Process Unfiltered Genres</button>
+            <textarea id="output-text" placeholder="Output will appear here..."></textarea>
+        </div>
+    </GenreProcessors>
+
+    </main>
+    <script src="script.js"></script>
+    <script src="songs2.js"></script>
+    <script src="SongList.js"></script>
+    <script src="GenreProcess.js"></script>
+</body>
+</html>
