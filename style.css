@@ -844,10 +844,156 @@ textarea {
     background-color: sandybrown;
 }
 
-.song-container {
-    width: 800px;
+/* Adjustments for Mobile */
+
+/* General Reset */
+body,
+h1,
+div,
+ol,
+input,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.to-do-list {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.top-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.delete-all {
+    background-color: red;
+    color: white;
+}
+
+/* Song Page Layout */
+.song-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.song-container {
+    flex: 1 1 100%;
+    /* Takes full width on smaller screens */
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Container */
 .search-container {
-    width: 250px;
+    flex: 1 1 100%;
+    /* Full width on mobile */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input,
+.search-container label {
+    flex: 1 1 calc(50% - 10px);
+    /* Two items per row on mobile */
+    min-width: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container .search-group {
+    display: flex;
+    flex: 1 1 100%;
+    /* Full width for grouped inputs */
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="date"] {
+    flex: 1 1 calc(50% - 10px);
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Load All Button */
+.all-matching-songs {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#load-all-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    .search-container input,
+    .search-container label {
+        flex: 1 1 100%;
+        /* Full width for inputs on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
+
+    .song-container,
+    .search-container {
+        padding: 10px;
+    }
 }
