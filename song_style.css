@@ -1,0 +1,376 @@
+/* General Styles */
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+main {
+    margin-top: 2rem;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Textarea Container */
+.textarea-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+/* Textareas */
+textarea {
+    flex: 1;
+    height: 300px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    resize: both;
+}
+
+/* App */
+
+body {
+    background-color: #fcf5e3;
+}
+
+.to-do-list,
+.desc-tool {
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 0px;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.top-button {
+    font-size: 1rem;
+}
+
+.to-do-list th {
+    border-style: none;
+}
+
+.to-do-list li {
+    font-size: 1.2rem;
+    /* Base font size for song rows */
+    padding: 10px;
+    /* Padding around the rows */
+    width: 95%;
+    /* Full width of the container */
+    text-align: left;
+    background-color: hsl(0, 0%, 97%);
+    margin-bottom: 5px;
+    /* Margin between song rows */
+    border: 2px solid hsla(0, 0%, 85%, 0.75);
+    /* Thinner border */
+    border-radius: 3px;
+    /* Smaller border radius */
+}
+
+.to-do-list th {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Flexbox container for the page */
+.song-page {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* 3 parts for song container, 1 part for search container */
+    padding: 10px;
+    /* Add padding around the page */
+    gap: 20px;
+    /* Space between song container and search container */
+}
+
+/* Scrollable container for the song list */
+.song-container {
+    height: 65vh;
+    /* Maximum height for scrolling */
+    overflow-y: auto;
+    /* Enable scrolling if content overflows */
+    padding: 15px;
+    /* Padding inside the song container */
+    border-right: 1px solid #ccc;
+    /* Border to the right */
+    background-color: #fff;
+    /* Background color */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
+
+/* Container for search bars */
+.search-container {
+    float: right;
+    /* Float the search container to the right */
+    width: 100%;
+    /* Set a width for the search container */
+    height: 48vh;
+    padding: 15px;
+    /* Padding inside the search container */
+    background-color: #f9f9f9;
+    /* Background color */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
+
+.song-row {
+    display: flex;
+    /* Use flexbox for the song row */
+    justify-content: space-between;
+    /* Align items to fill the space */
+    align-items: center;
+    /* Center items vertically */
+    padding: 10px;
+    /* Reduced padding */
+    width: 90%;
+    /* Keep flexible width */
+    background-color: hsl(0, 0%, 97%);
+    margin-bottom: 5px;
+    /* Reduced margin for spacing */
+    border: 2px solid hsla(0, 0%, 85%, 0.75);
+    border-radius: 3px;
+}
+
+.song-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* Bold font for song name */
+    display: block;
+    /* Ensure song name is on its own line */
+}
+
+/* All matching songs */
+
+.all-matching-songs {
+    height: 75vh;
+    /* Taller than the main song container */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    padding: 15px;
+    /* Padding inside the container */
+    border-left: 1px solid #ccc;
+    /* Border on the left */
+    background-color: #f9f9f9;
+    /* Slightly lighter background for differentiation */
+    box-sizing: border-box;
+    /* Include padding in height/width calculations */
+}
+
+.all-matching-songs .song-row {
+    margin-bottom: 10px;
+    /* Spacing between rows */
+    padding: 10px;
+    /* Padding inside each row */
+    border-radius: 5px;
+    /* Rounded corners for cleaner look */
+    text-align: left;
+    /* Ensure left alignment */
+    display: flex;
+    /* Ensure content behaves predictably */
+    align-items: flex-start;
+    /* Align items to the top */
+    gap: 0;
+    /* No gaps between children */
+    box-sizing: border-box;
+    /* Include padding in width calculations */
+}
+
+
+/* Content wrapper for song info and buttons */
+.song-content {
+    display: flex;
+    /* Flexbox for content alignment */
+    justify-content: space-between;
+    /* Space between song info and buttons */
+    width: 100%;
+    /* Full width for the content */
+}
+
+.song-info {
+    flex: 1;
+    /* Allow song info to take available space */
+    margin-right: 20px;
+    /* Add space between info and buttons */
+}
+
+.buttons {
+    display: flex;
+    /* Align buttons horizontally */
+    align-items: center;
+    /* Center buttons vertically */
+}
+
+.to-do-list button {
+    font-weight: bold;
+    padding: 10px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5 ease;
+}
+
+.delete-button,
+.move-button,
+.add-button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.add-button,
+.top-button {
+    background-color: hsl(125, 47%, 54%);
+}
+
+.add-button:hover,
+.top-button {
+    background-color: hsl(125, 47%, 44%);
+}
+
+.delete-button {
+    background-color: hsl(10, 90%, 50%);
+}
+
+.delete-button:hover {
+    background-color: hsl(10, 90%, 40%);
+}
+
+.move-button {
+    background-color: hsl(207, 90%, 64%);
+}
+
+.move-button:hover {
+    background-color: hsl(207, 90%, 54%);
+}
+
+.language {
+    padding: 0px;
+    text-align: left;
+}
+
+ol {
+    padding: 0 0;
+}
+
+.text {
+    flex: 1;
+}
+
+.search-group {
+    display: flex;
+    /* Use flexbox to align items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    margin-bottom: 15px;
+    /* Space below each search group */
+}
+
+/* Style individual search bars */
+.search-container input[type="text"] {
+    padding: 8px;
+    /* Padding inside the input */
+    border: 1px solid #ccc;
+    /* Border style */
+    border-radius: 5px;
+    /* Rounded corners */
+    width: 100%;
+    /* Full width for inputs */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Mobile Layout */
+    .song-page {
+        grid-template-columns: 1fr; /* Stack containers vertically */
+        gap: 10px; /* Reduce gap */
+    }
+
+    .song-container {
+        height: auto; /* Allow height to adapt */
+        border-right: none; /* Remove border */
+    }
+
+    .search-container {
+        height: auto; /* Allow height to adapt */
+        padding: 10px; /* Adjust padding */
+    }
+
+    /* Adjust input sizes for smaller screens */
+    .search-container input[type="text"],
+    .search-container input[type="date"] {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    .song-row {
+        flex-direction: column; /* Stack content vertically */
+        align-items: flex-start; /* Align to the start */
+    }
+
+    .song-content {
+        flex-direction: column; /* Stack the info and buttons vertically */
+    }
+
+    .buttons {
+        margin-top: 10px; /* Add space above the buttons */
+        width: 100%; /* Take the full width */
+        justify-content: flex-start; /* Align buttons to the start */
+    }
+
+    .buttons button {
+        margin-right: 5px; /* Space between buttons */
+    }
+}
+
+/* Adjusting the margins only for desktop */
+@media (min-width: 769px) {
+    .song-page {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 1000px; /* or whatever max width you want */
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    .song-container {
+        width: 700px; /* fixed width */
+        overflow-y: auto; /* keep scroll */
+        flex-shrink: 0; /* don't shrink */
+        box-sizing: border-box;
+    }
+
+    .search-container {
+        width: 280px; /* fixed width */
+        flex-shrink: 0; /* don't shrink */
+        box-sizing: border-box;
+    }
+}
+

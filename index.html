@@ -14,6 +14,9 @@
     <!-- Mode Toggle Button -->
      <!-- <div class="mode-toggle-container"> -->
         <!-- <button id="modeToggleButton">LD</button> -->
+    <div class="topnav">
+        <div id="navbar"></div>
+    </div>
 
     <LoggingTool>
     <h1>Listener's Diary</h1>
@@ -76,6 +79,53 @@
             <button id="addRowButton">Add Row</button>
             <button id="copyAllButton">Copy All</button>
         </div>
+
+        <ul class="checklist">
+            <li>
+                <input type="checkbox" id="task1">
+                <label for="task1">RYM: Set listening on RYM</label>
+            </li>
+            <li>
+                <input type="checkbox" id="task5">
+                <label for="task4">RYM: Listener's Diary</label>
+            </li>
+            <li>
+                <input type="checkbox" id="task7">
+                <label for="task7">RYM: Tags (a4 or a precise score w/ pr)</label>
+            </li>
+            <li>
+                <input type="checkbox" id="task2">
+                <label for="task2">iTunes: Add the Songs</label>
+            </li>
+            <li>
+                <input type="checkbox" id="task4">
+                <label for="task3">iTunes: Full a4</label>
+            </li>
+            <li>
+                <input type="checkbox" id="task8">
+                <label for="task8">iTunes: Instrumental / Non-English Language playlists (if applicable)</label>
+            </li>
+            <li>
+                <input type="checkbox" id="task3">
+                <label for="task3">Sheet: a4 sheet</label>
+            </li>
+            <li>
+                <input type="checkbox" id="task6">
+                <label for="task5">Sheet: songs</label>
+            </li>
+        </ul>
+
+        <div class="controls">
+            <button onclick="checkAll(true)">Check All</button>
+            <button onclick="checkAll(false)">Uncheck All</button>
+        </div>
+    
+        <script>
+            function checkAll(state) {
+                const checkboxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+                checkboxes.forEach(checkbox => checkbox.checked = state);
+            }
+        </script>
     </LoggingTool>
 
     <DescTool>
@@ -307,7 +357,8 @@
 
     <SongList>
         <div class="to-do-list">
-            <h1>Song Randomizer</h1>
+            <h1>– Song Randomizer –</h1>
+
             <div>
                 <button class="top-button" id="random-new-button">Random New</button>
                 <button class="top-button" id="random-replace-all-button">Random Replace All</button>
@@ -368,6 +419,9 @@
 
     </main>
     <script src="script.js"></script>
+    <script src="navbar.js"></script>
+    <script src="state.js"></script>
+    <!-- state.js currently doesn't work or help, but it's there -->
     <script src="songs2.js"></script>
     <script src="SongList.js"></script>
     <script src="GenreProcess.js"></script>

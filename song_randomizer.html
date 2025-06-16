@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Randomizer</title>
+    <link rel="stylesheet" href="song_style.css">
+</head>
+<body>
+    <header>
+        <h1>Music Library Tools</h1>
+    </header>
+
+    <div id="navbar"></div>
+
+    <SongList>
+        <div class="to-do-list">
+            <h1>– Song Randomizer –</h1>
+
+            <div>
+                <button class="top-button" id="random-new-button">Random New</button>
+                <button class="top-button" id="random-replace-all-button">Random Replace All</button>
+                <button class="delete-all" id="delete-all-button" style="background-color: red; color: white;">Delete All</button>
+            </div>
+    
+            <div class="song-page">
+                <div class="song-container">
+                    <ol id="task-list"></ol>
+                </div>
+    
+                <div class="search-container">
+                    <!-- Inputs for filtering -->
+                    <input type="text" placeholder="Search by artist..." id="artist-search">
+                    <input type="text" placeholder="[Song name search: Will fix later]" id="name-search">
+                    <div class="search-group">
+                        <input type="text" id="genre-search" placeholder="Search by genre...">
+                        <label>
+                            <input type="checkbox" id="include-all-genres"> Include all
+                        </label>
+                    </div>
+                    <div class="search-group">
+                        <input type="text" id="descriptor-search" placeholder="Search by descriptor...">
+                        <label>
+                            <input type="checkbox" id="include-all-descriptors"> Include all
+                        </label>
+                    </div>
+                    <input type="text" placeholder="Search by year..." id="year-search">
+                    <input type="text" placeholder="Search by language..." id="language-search">
+                    <input type="date" id="start-date">
+                    <input type="date" id="end-date">
+                </div>
+            </div>
+    
+            <div class="all-matching-songs">
+                <button id="load-all-button" style="background-color: blue; color: white;">Load All</button>
+                <div id="song-list"></div>
+            </div>
+        </div>
+    </SongList>
+
+    <script src="navbar.js"></script>
+    <script src="state.js"></script>
+    <script src="songs2.js"></script>
+    <script src="SongList.js"></script>
+</body>
+</html>
