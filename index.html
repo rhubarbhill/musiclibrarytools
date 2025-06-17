@@ -76,9 +76,11 @@
                     </tr>
                 </tbody>
             </table>
-            <button id="addRowButton">Add Row</button>
-            <button id="copyAllButton">Copy All</button>
+            <!-- <button id="addRowButton">Add Row</button> 
+             Not functional or necessary anymore -->
         </div>
+
+        <button id="copyAllButton" style="height: 40px; width: 800px;">Copy All</button>
 
         <ul class="checklist">
             <li>
@@ -400,6 +402,20 @@
         </div>
     </SongList>
 
+    <GenreGrid>
+        <!-- Preview Image -->
+        <div class="image-preview-container">
+            <img src="genre-grid.PNG" alt="A colorful grid of genre names" class="preview-image" onclick="openLightbox()">
+        </div>
+    
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+            <img src="genre-grid.PNG" alt="A colorful grid of genre names" class="lightbox-image">
+            <button class="close-button" onclick="closeLightbox()">✖ Close</button>
+        </div>
+    </GenreGrid>
+
+
     <GenreProcessors>
         <div id="genre-processor">
             <h1>Genre Processor</h1>
@@ -423,6 +439,7 @@
     <script src="state.js"></script>
     <!-- state.js currently doesn't work or help, but it's there -->
     <script src="songs2.js"></script>
+    <script src="lightbox.js"></script>
     <script src="SongList.js"></script>
     <script src="GenreProcess.js"></script>
 </body>

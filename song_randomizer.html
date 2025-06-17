@@ -58,9 +58,23 @@
         </div>
     </SongList>
 
+    <GenreGrid>
+        <!-- Preview Image -->
+        <div class="image-preview-container">
+            <img src="genre-grid.PNG" alt="A colorful grid of genre names" class="preview-image" onclick="openLightbox()">
+        </div>
+    
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+            <img src="genre-grid.PNG" alt="A colorful grid of genre names" class="lightbox-image">
+            <button class="close-button" onclick="closeLightbox()">✖ Close</button>
+        </div>
+    </GenreGrid>
+
     <script src="navbar.js"></script>
     <script src="state.js"></script>
     <script src="songs2.js"></script>
+    <script src="lightbox.js"></script>
     <script src="SongList.js"></script>
 </body>
 </html>
