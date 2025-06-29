@@ -826,6 +826,31 @@ textarea {
     color: #ea9999;
 }
 
+.groovy button {
+    background-color: #b45f06;
+    color: #ffffff;
+}
+
+.friendship button {
+    background-color: #ffd966;
+    color: #000000;
+}
+
+.family button {
+    background-color: #ea4335;
+    color: #ffffff;
+}
+
+.music button {
+    background-color: #a64d79;
+    color: #ffffff;
+}
+
+.angular button {
+    background-color: #85200c;
+    color: #ffffff;
+}
+
 /* .reset button {
     background-color: red;
     color: white;
