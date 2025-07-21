@@ -135,7 +135,13 @@ function parseInput(input) {
 
         if (!trimmedLine) return; // Skip empty lines
 
-        if (trimmedLine.toLowerCase().startsWith('track review:')) {
+        // if (trimmedLine.toLowerCase().startsWith('track review:')) {
+        //     isTrackReview = true;
+        //     return;
+        // }
+
+        const lowerLine = trimmedLine.toLowerCase();
+        if (lowerLine.startsWith('track review:') || lowerLine.startsWith('tr:')) {
             isTrackReview = true;
             return;
         }
@@ -160,7 +166,7 @@ function parseInput(input) {
                     const songName = trimmedLine.slice(1, songNameEndIndex);
                     const remainingText = trimmedLine.slice(songNameEndIndex + 1).trim();
                     const hasCheckmark = remainingText.includes('(+)', 0);  // Check for checkmark (+)
-            
+
                     // Check for Artist - Song format
                     const hyphenIndex = songName.indexOf(' - ');
                     if (hyphenIndex !== -1) {
@@ -419,16 +425,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!trimmedLine) return; // Skip empty lines
 
             // Detect start of track review section
-            if (trimmedLine.toLowerCase().startsWith('track review:')) {
+            // if (trimmedLine.toLowerCase().startsWith('track review:')) {
+            //     isTrackReview = true;
+            //     return;
+            // }
+            const lowerLine = trimmedLine.toLowerCase();
+            if (lowerLine.startsWith('track review:') || lowerLine.startsWith('tr:')) {
                 isTrackReview = true;
                 return;
             }
 
-            // Detect song/album code
-            if (trimmedLine.startsWith('[')) {
-                currentSongCode = trimmedLine; // Store the code for the current song
-                return;
-            }
+            // Detect song/album code - Currently nonfunctional and unnecessary anyway so I commented it out on 20 July
+            // if (trimmedLine.startsWith('[')) {
+            //     currentSongCode = trimmedLine; // Store the code for the current song
+            //     return;
+            // }
 
             // Skip metadata lines like Y:, G:, D:, L:
             if (trimmedLine.match(/^[a-zA-Z]:/)) {
