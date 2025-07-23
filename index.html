@@ -348,9 +348,19 @@
                 // alert("Copied to clipboard!");
             }
     
+            // function reset() {
+            //     document.querySelectorAll(".strike").forEach(el => el.classList.remove("strike"));
+            //     document.querySelector("#descriptor-area").value = "";
+            // }
+
+            let lastDescriptorValue = ""; // Temporary backup
+
             function reset() {
+                const descriptorArea = document.querySelector("#descriptor-area");
+                lastDescriptorValue = descriptorArea.value; // Save current value
                 document.querySelectorAll(".strike").forEach(el => el.classList.remove("strike"));
-                document.querySelector("#descriptor-area").value = "";
+                descriptorArea.value = ""; // Clear the field
+                console.log("Value saved before reset:", lastDescriptorValue);
             }
     
             // Attach event listeners
