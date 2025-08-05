@@ -851,6 +851,21 @@ textarea {
     color: #ffffff;
 }
 
+.community button {
+    background-color: #3d8fbb;
+    color: #ffffff;
+}
+
+.self-worth button {
+    background-color: #c3eee4;
+    color: #000000;
+}
+
+.rhythmic button {
+    background-color: #a64d79;
+    color: #ffffff;
+}
+
 /* .reset button {
     background-color: red;
     color: white;
