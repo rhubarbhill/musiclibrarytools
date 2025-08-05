@@ -861,6 +861,11 @@ textarea {
     color: #000000;
 }
 
+.altruistic button {
+    background-color: #ffd333;
+    color: #000000;
+}
+
 .rhythmic button {
     background-color: #a64d79;
     color: #ffffff;
