@@ -871,6 +871,31 @@ textarea {
     color: #ffffff;
 }
 
+.depressive button {
+    background-color: #1155cc;
+    color: #a2c4c9;
+}
+
+.mountains button {
+    background-color: #7f6000;
+    color: #ffd966;
+}
+
+.aerial button {
+    background-color: #7ff2ff;
+    color: #3d8fbb;
+}
+
+.narrative button {
+    background-color: #38761d;
+    color: #ffffff;
+}
+
+.slice-of-life button {
+    background-color: #007062;
+    color: #ffffff;
+}
+
 /* .reset button {
     background-color: red;
     color: white;
