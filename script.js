@@ -430,10 +430,16 @@ document.addEventListener('DOMContentLoaded', () => {
             //     return;
             // }
             const lowerLine = trimmedLine.toLowerCase();
-            if (lowerLine.startsWith('track review:') || lowerLine.startsWith('tr:')) {
+
+            if (lowerLine.startsWith('ld:') || lowerLine.startsWith('tr:')) {
                 isTrackReview = true;
                 return;
             }
+
+            // if (lowerLine.startsWith('track review:') || lowerLine.startsWith('tr:')) {
+            //     isTrackReview = true;
+            //     return;
+            // }
 
             // Detect song/album code - Currently nonfunctional and unnecessary anyway so I commented it out on 20 July
             // if (trimmedLine.startsWith('[')) {
