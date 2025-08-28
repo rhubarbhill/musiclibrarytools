@@ -892,7 +892,17 @@ textarea {
 }
 
 .slice-of-life button {
-    background-color: #007062;
+    background-color: #a8fa83;
+    color: #000000;
+}
+
+.ECM-Style button {
+    background-color: #134f5c;
+    color: #ffffff;
+}
+
+.Metheny-Sound button {
+    background-color: #57bb8a;
     color: #ffffff;
 }
 

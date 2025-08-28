@@ -140,11 +140,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="buttons">
                         <button class="add-button" onclick="randomReplace(${index})">🎲</button>
                         <button class="delete-button" onclick="deleteTask(${index})">❌</button>
-                        <button class="move-button" onclick="copyToClipboard('${song.Artist}')">🎤</button>
-                        <button class="move-button" onclick="copyToClipboard('${song.Song}')">🎵</button>
+                        <button class="move-button" data-action="copy" data-text="${song.Artist.replace(/"/g, '&quot;')}">🎤</button>
+                        <button class="move-button" data-action="copy" data-text="${song.Song.replace(/"/g, '&quot;')}">🎵</button>
                     </div>
                 </div>
             `;
+
+            listItem.querySelectorAll('[data-action="copy"]').forEach(btn => {
+                btn.addEventListener('click', () => copyToClipboard(btn.dataset.text));
+            });
 
             taskList.appendChild(listItem);
         });
