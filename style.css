@@ -906,6 +906,21 @@ textarea {
     color: #ffffff;
 }
 
+.self-hatred button {
+    background-color: #990000;
+    color: #ffff00;
+}
+
+.misanthropic button {
+    background-color: #f1c232;
+    color: #7f6000;
+}
+
+.alienation button {
+    background-color: #434343;
+    color: #b7b7b7;
+}
+
 /* .reset button {
     background-color: red;
     color: white;
