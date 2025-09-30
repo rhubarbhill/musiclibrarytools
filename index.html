@@ -276,7 +276,8 @@
                         <td class="ECM-Style" id="ECM Style"><button data-descriptor="ECM Style">ECM Style</button></td>
                         <td class="rain" id="rainy"><button data-descriptor="rainy">rainy</button></td>
                         <td class="heavy" id="noisy"><button data-descriptor="noisy">noisy</button></td>
-                        <td class="self-hatred" id="self-hatred"><button data-descriptor="self-hatred">self-hatred</button></td>
+                        <td class="self-hatred" id="self-hatred"><button
+                                data-descriptor="self-hatred">self-hatred</button></td>
                         <td class="Summer" id="Summer"><button data-descriptor="Summer">Summer</button></td>
                     </tr>
                     <tr>
@@ -285,10 +286,12 @@
                         <td class="love" id="love"><button data-descriptor="love">love</button></td>
                         <td class="late-nocturne" id="starry night"><button data-descriptor="starry night">starry
                                 night</button></td>
-                        <td class="Metheny-Sound" id="Metheny Sound"><button data-descriptor="Metheny Sound">Metheny</button></td>
+                        <td class="Metheny-Sound" id="Metheny Sound"><button
+                                data-descriptor="Metheny Sound">Metheny</button></td>
                         <td class="storm" id="storm"><button data-descriptor="storm">storm</button></td>
                         <td class="heavy" id="dense"><button data-descriptor="dense">dense</button></td>
-                        <td class="misanthropic" id="misanthropic"><button data-descriptor="misanthropic">misanthropic</button></td>
+                        <td class="misanthropic" id="misanthropic"><button
+                                data-descriptor="misanthropic">misanthropic</button></td>
                         <td class="Autumn" id="Autumn"><button data-descriptor="Autumn">Autumn</button></td>
                     </tr>
                     <tr>
@@ -300,7 +303,8 @@
                                 life</button></td>
                         <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
                         <td class="heavy" id="raw"><button data-descriptor="raw">raw</button></td>
-                        <td class="alienation" id="alienation"><button data-descriptor="alienation">alienation</button></td>
+                        <td class="alienation" id="alienation"><button data-descriptor="alienation">alienation</button>
+                        </td>
                         <td class="Winter" id="Winter"><button data-descriptor="Winter">Winter</button></td>
                     </tr>
                     <tr>
@@ -340,6 +344,28 @@
                         <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
                         <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
                     </tr>
+                    <tr>
+                        <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                        <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                        <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                        <td class="narrative" id="wl-lit"><button data-descriptor="wl-lit">wl-lit</button></td>
+                        <td class="slice-of-life" id="lit-sol"><button data-descriptor="lit-sol">lit-sol</button></td>
+                        <td class="otherworldly" id="lit-af"><button data-descriptor="lit-af">lit-af</button></td>
+                        <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                        <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                        <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    </tr>
+                    <tr>
+                        <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                        <td class="love" id="lit-rom"><button data-descriptor="lit-rom">lit-rom</button></td>
+                        <td class="fun" id="lit-com"><button data-descriptor="lit-com">lit-com</button></td>
+                        <td class="sad" id="lit-mel"><button data-descriptor="lit-mel">lit-mel</button></td>
+                        <td class="dark" id="lit-hor"><button data-descriptor="lit-hor">lit-hor</button></td>
+                        <td class="mechanical" id="lit-sf"><button data-descriptor="lit-sf">lit-sf</button></td>
+                        <td class="mysterious" id="lit-tm"><button data-descriptor="lit-tm">lit-tm</button></td>
+                        <td class="conscious" id="lit-his"><button data-descriptor="lit-his">lit-his</button></td>
+                        <td class="blank" id="INC"><button data-descriptor="INC">INC</button></td>
+                    </tr>
                 </tbody>
             </table>
 
@@ -347,6 +373,7 @@
 
             <button id="copy-button">Copy All</button>
             <button id="reset-button">Reset</button>
+            <button id="comma-button" onclick="copyWithCommas()">Comma</button>
 
             <textarea id="descriptor-area-2" name="descriptor-area-2" rows="3" cols="80"></textarea><br>
 
@@ -423,6 +450,16 @@
                 document.querySelector("#descriptor-area").addEventListener("input", handleTextareaInput);
                 document.querySelector("#copy-button").addEventListener("click", copyAll);
                 document.querySelector("#reset-button").addEventListener("click", reset);
+
+                // Comma Conversion
+                function copyWithCommas() {
+                    const textarea = document.querySelector("#descriptor-area");
+                    const textWithCommas = textarea.value.replace(/;/g, ",");
+                    textarea.select();
+                    navigator.clipboard.writeText(textWithCommas)
+                        .then(() => console.log("Copied with commas:", textWithCommas))
+                        .catch(err => console.error("Failed to copy:", err));
+                }
             </script>
 
             <!-- Tier List -->
