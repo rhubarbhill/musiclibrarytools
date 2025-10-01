@@ -921,6 +921,11 @@ textarea {
     color: #b7b7b7;
 }
 
+.eclectic button {
+    background-color: #bed52f;
+    color: #007062;
+}
+
 /* .reset button {
     background-color: red;
     color: white;
