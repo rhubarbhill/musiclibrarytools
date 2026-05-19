@@ -43,7 +43,7 @@ textarea {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #b5a9a9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     resize: both;
 }
@@ -82,6 +82,10 @@ td {
 
 td[contenteditable="true"] {
     outline: none;
+}
+
+.checklist {
+    color: #b6d7a8;
 }
 
 /* New */
@@ -219,7 +223,8 @@ textarea {
 /* App */
 
 body {
-    background-color: #fcf5e3;
+    background-color: #134f5c;
+    /* Old light version: #fcf5e3 */
 }
 
 .to-do-list,
@@ -231,6 +236,11 @@ body {
 
 h1 {
     font-size: 4rem;
+    color: #b6d7a8;
+}
+
+h3 {
+    color: #b6d7a8;
 }
 
 .top-button {
@@ -342,7 +352,7 @@ h1 {
     /* Padding inside the container */
     border-left: 1px solid #ccc;
     /* Border on the left */
-    background-color: #f9f9f9;
+    background-color: #878787;
     /* Slightly lighter background for differentiation */
     box-sizing: border-box;
     /* Include padding in height/width calculations */
@@ -581,8 +591,8 @@ textarea {
 }
 
 .blank button {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #606060;
+    color: #5a5858;
     opacity: 0;
 }
 
@@ -946,10 +956,12 @@ textarea {
 
 .song-container {
     width: 650px;
+    background-color: #666666;
 }
 
 .search-container {
     width: 250px;
+    background-color: #666666;
 }
 
 /* Mobile Adjustments */
@@ -1031,7 +1043,7 @@ textarea {
     overflow-y: auto;
     font-family: sans-serif;
     font-size: 14px;
-    background: #fafafa;
+    background: #959393;
     border-radius: 6px;
 }
 
@@ -1054,7 +1066,7 @@ textarea {
     border: 1px solid #ccc;
     padding: 10px;
     font-family: monospace;
-    background: #f9f9f9;
+    background: #959393;
     border-radius: 5px;
 }
 
